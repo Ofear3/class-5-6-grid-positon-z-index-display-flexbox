@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-Index Hover Effect</title>
+
+    <style>
+        /* Reset default body margin */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Sticky Header */
+        header {
+            /* position: sticky; */
+            top: 0;
+            background-color: antiquewhite;
+            border: 2px solid black;
+            border-radius: 10px 0;
+            padding: 10px 0;
+            /* z-index: 1000; */
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+            font-size: 32px;
+            font-weight: 700;
+            padding: 10px 20px;
+            transition: transform 0.3s ease-out,
+                        background-color 0.3s ease;
+        }
+
+        a:hover {
+            transform: scale(1.05);
+            background-color: rgba(189, 189, 10, 0.3);
+            border-radius: 10%;
+        }
+
+
+
+        /* Position Section */
+
+#position {
+    padding: 40px;
+}
+
+#position > div {
+    border: 2px solid #333;
+    padding: 15px;
+    margin: 20px 0;
+    background-color: #f4f4f4;
+}
+
+/* Static (default) */
+.static {
+    position: static;
+}
+
+/* Relative */
+.relative {
+    position: relative;
+    left: 30px;
+    top: 10px;
+    background-color: #d4f1f9;
+}
+
+/* Absolute */
+.absolute {
+    position: absolute;
+    right: 20px;
+    top: 250px;
+    width: 300px;
+    background-color: #ffd6d6;
+}
+
+/* Fixed */
+.fixed {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 260px;
+    background-color: #d7ffd9;
+    z-index: 999;
+}
+
+/* Sticky */
+.sticky {
+    position: sticky;
+    top: 30px; 
+    background-color: #fff3b0;
+    z-index:1000;
+}
+
+
+        /* Z-INDEX SECTION */
+
+        #z-index h1 {
+            text-align: center;
+        }
+
+        /* Container for boxes */
+        .container {
+            background-color: rgba(42, 34, 150, 0.801);
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .z-index-boxes {
+            position: relative; 
+            width: 300px;      
+            height: 300px;
+        }
+
+        .z-box {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+
+            transition: transform 0.3s ease; 
+        }
+
+        /* Individual box positions */
+        .z-1 { background: #c2db34fc; left: 0;   top: 50px; }
+        .z-2 { background: #2eccba; left: 50px; top: 100px; }
+        .z-3 { background: #e505b4; left: 100px; top: 150px; }
+        .z-4 { background: #1268f3; left: 150px; top: 200px ; bottom:50px; }
+
+        /* Hover effect: move up only */
+        .z-box:hover {
+            transform: translateY(-40px); 
+            z-index:5;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- header section  -->
+    <header>
+        <nav>
+            <a href="#position">Position</a>
+            <a href="#z-index">Z-index</a>
+        </nav>
+    </header>
+
+    <!-- main section  -->
+    <main>
+        <section id="position">
+            <h1 style="text-align:center;">Positioning in CSS</h1>
+
+
+             <div class="sticky">
+                <h4>Sticky Position:</h4>
+                <p>Element acts like relative until a scroll position is reached, then sticks like fixed.</p>
+            </div>
+            
+            
+            <div class="static">
+                <h4>Static Positon:</h4>
+                <p>Static position in CSS is the default positioning where an element stays in the normal
+                    document flow and ignores top, left, right, and bottom.</p>
+            </div>
+
+            <div class="relative">
+                <h4>Relative Positon:</h4>
+                <p>Element stays in normal flow but can be moved using top, left, right, bottom relative to its original position.</p>
+            </div>
+
+            <div class="absolute">
+                <h4>Absolute Positon:</h4>
+                <p>Element is removed from normal flow and positioned relative to the nearest positioned ancestor (not static).</p>
+            </div>
+
+            <div class="fixed">
+                <h4>Fixed Postion:</h4>
+                <p>Element is removed from normal flow and positioned relative to the viewport (screen), stays fixed on scroll.</p>
+            </div>
+
+        </section>
+          
+        <section id="z-index">
+            <h1>Z-index in CSS</h1>
+            <div class="container">
+                <div class="z-index-boxes">
+                    <div class="z-box z-1">Z-Index 1</div>
+                    <div class="z-box z-2">Z-Index 2</div>
+                    <div class="z-box z-3">Z-Index 3</div>
+                    <div class="z-box z-4">Z-Index 4</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
