@@ -160,12 +160,41 @@
 
 /* ==========ADDing Media Query for Responsive==========*/
 
-    @media (min-width:576px) {
+    @media (max-width:576px) {
 
-    .header input{
-        width: 200px;
-        }    
+        .dashboard-box{
+            grid-template-rows: 60px auto 1fr auto;
+            grid-template-columns: 1fr;
+            grid-template-areas:"header"
+                                 "sidebar"
+                                 "main"
+                                 "footer";
+            min-height: 100vh;                    
+        }
+
+    .header{
+        display:flex;
+        flex-direction: row;
     }
+        
+    .header input{
+        width: 140px;
+        } 
+        
+    .sidebar{
+        flex-direction: column;
+        justify-content: space-around;
+        } 
+    
+    .menu{
+        padding:0;
+        flex-direction: row;
+        font-size: 13px;
+        justify-content: center;
+    }   
+        
+    }
+
 
 
     @media (min-width:992px) {
