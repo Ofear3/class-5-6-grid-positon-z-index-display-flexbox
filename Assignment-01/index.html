@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PCIST - Programming Club of IST</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<nav>
+  <div class="nav-bar-area">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#event">Events</a>
+    <a href="#join">Join us</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <img src="./images/pcist.png" class="logo">
+</nav>
+</header>
+
+<main>
+
+<!-- HOME -->
+<section id="home">
+<h1>Welcome to PCIST</h1>
+<p class="heading-para">
+Programming Club of IST <b><em>(pcIST)</em></b> is the club for students who are interested in building great skills.
+</p>
+<hr>
+</section>
+
+<section class="audio">
+<audio controls autoplay loop>
+<source src="./images/audio.mp3" type="audio/mpeg">
+</audio>
+</section>
+
+<section>
+<h2>Member Testimonials</h2>
+<div class="testimonials">
+<div class="testimonial-1">
+<q>Being a member greatly improved my coding skills.</q><br><b>— Alex</b>
+</div>
+<div class="testimonial-1">
+<img src="./images/pcist.png">
+</div>
+<div class="testimonial-1">
+<q>Friendly environment for beginners and advanced learners.</q><br><b>— Sarah</b>
+</div>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h1>About PCIST</h1>
+  <hr>
+  <p class="text">
+    The <strong>Programming Club of IST (pcIST)</strong> is a student-driven organization committed to
+    nurturing programming excellence and technical innovation among students.
+    We provide a collaborative platform where members can explore modern technologies,
+    enhance problem-solving skills, and prepare themselves for academic and professional success.
+    Through regular workshops, coding sessions, hackathons, and peer learning,
+    pcIST encourages creativity, teamwork, and continuous growth.
+  </p>
+</section>
+
+<section class="card-container">
+
+  <div class="card">
+    <h2>Course</h2>
+    <p>
+      Well-structured academic and skill-based courses covering core computer science topics
+      such as programming fundamentals, data structures, algorithms, and software concepts.
+      These courses help members build a strong foundation for higher studies and industry careers.
+    </p>
+    <button>Explore</button>
+  </div>
+
+  <div class="card">
+    <h2>Competitive Programming</h2>
+    <p>
+      A dedicated practice environment focused on logical thinking and algorithmic problem solving.
+      Members participate in coding contests, debugging challenges, and online judge platforms
+      to improve speed, accuracy, and analytical skills.
+    </p>
+    <button>Practice</button>
+  </div>
+
+  <div class="card">
+    <h2>Web Development</h2>
+    <p>
+      Hands-on learning of modern web technologies including
+      <strong>HTML, CSS, JavaScript</strong> for frontend development and
+      backend technologies such as <strong>Node.js, Laravel, and databases</strong>.
+      Members work on real-world projects to gain practical development experience.
+    </p>
+    <button>Start Learning</button>
+  </div>
+
+</section>
+
+
+<!-- EVENTS -->
+<section id="event">
+<h1>Events</h1>
+<hr>
+<p class="text">
+<strong>Annual Hackathon</strong><br>
+Team-based project building competition.
+</p>
+
+</section>
+
+<section>
+<h2>Event Schedule</h2>
+<table>
+<tr><th>Event</th><th>Date</th><th>Time</th><th>Venue</th></tr>
+<tr><td>Workshop</td><td>1 Jan 2026</td><td>10–3</td><td>Room 404</td></tr>
+<tr><td>Hackathon</td><td>20 Jan 2026</td><td>10–3</td><td>IST Lab</td></tr>
+</table>
+</section>
+
+
+<!-- JOIN -->
+<section id="join">
+  <h1>Join pcIST</h1>
+  <hr>
+  <br>
+
+  <div class="join-div">
+    <div class="container">
+      <div class="title">Registration</div>
+
+      <form>
+
+        <div class="user-details">
+
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" placeholder="Enter your name" required>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Student ID</span>
+            <input type="text" placeholder="Enter your Student ID" required>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="email" placeholder="Enter your email" required>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="text" placeholder="Enter your number" required>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Select Your Batch</span>
+            <select required>
+              <option disabled selected>Select Batch</option>
+              <option>Batch 27</option>
+              <option>Batch 28</option>
+              <option>Batch 29</option>
+              <option>Batch 30</option>
+              <option>Batch 31</option>
+              <option>Batch 32</option>
+            </select>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Select Your Department</span>
+            <select required>
+              <option disabled selected>Select Department</option>
+              <option>CSE</option>
+              <option>ECE</option>
+              <option>BBA</option>
+            </select>
+          </div>
+
+          <div class="input-box full">
+            <span class="details">Why do you want to join pcIST?</span>
+            <textarea rows="3" placeholder="Your answer here..." required></textarea>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Date of Birth</span>
+            <input type="date" required>
+          </div>
+
+        </div>
+
+        <!-- Gender -->
+        <div class="gender-details">
+          <span class="gender-title">Gender</span>
+          <div class="category">
+            <label><input type="radio" name="gender" required> Male</label>
+            <label><input type="radio" name="gender"> Female</label>
+          </div>
+        </div>
+
+        <!-- Experience -->
+        <div class="gender-details">
+          <span class="gender-title">Programming Experience</span>
+          <div class="category">
+            <label><input type="radio" name="exp" required> Beginner</label>
+            <label><input type="radio" name="exp"> Intermediate</label>
+            <label><input type="radio" name="exp"> Advanced</label>
+          </div>
+        </div>
+
+        <div class="button">
+          <input type="submit" value="Register">
+          <input type="reset" value="Reset">
+        </div>
+
+      </form>
+    </div>
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+<h1>Contact Us</h1>
+<hr>
+<p class="contact-info">
+Email: pcist@gmail.com | Phone: +8801234567890<br>
+<a href="#">Facebook</a> | <a href="#">Instagram</a>
+</p>
+</section>
+
+</main>
+
+<footer>
+&copy; 2026 Programming Club of IST. All rights reserved by Mohammad Saif (Ofear).
+</footer>
+
+</body>
+</html>
